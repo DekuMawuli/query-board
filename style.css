@@ -41,17 +41,17 @@ html, body {
 }
 
 #loading-screen .logo {
-    font-size: 3.5rem; /* Slightly larger */
-    font-weight: 700; /* Bolder */
+    font-size: 3.5rem;
+    font-weight: 700;
     color: var(--primary-color);
     border: 3px solid var(--primary-color);
-    padding: 0.7rem 1.2rem; /* Adjusted padding */
-    border-radius: 10px; /* Slightly more rounded */
+    padding: 0.7rem 1.2rem;
+    border-radius: 10px;
     animation: pulse 2s infinite ease-in-out;
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); } /* Softer glow */
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4); }
     50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0); }
 }
 
@@ -76,7 +76,7 @@ html, body {
     text-align: center;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px); /* Slide in from bottom */
+    transform: translateY(20px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out, visibility 0.7s;
 }
 
@@ -88,18 +88,18 @@ html, body {
 }
 
 .slide-content {
-    max-width: 960px; /* Slightly wider content area */
+    max-width: 960px;
     width: 100%;
-    background-color: var(--card-color); /* Content background */
-    padding: 3rem 2rem; /* More padding */
-    border-radius: 12px; /* Smoother corners */
-    box-shadow: 0 5px 20px var(--shadow-color); /* Professional shadow */
-    border: 1px solid var(--border-color); /* Subtle border */
+    background-color: var(--card-color);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    border: 1px solid var(--border-color);
 }
 
 /* --- ENTRANCE ANIMATIONS --- */
 .slide.active > .slide-content > * {
-    animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; /* Smoother bounce */
+    animation: fadeInUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 .slide.active > .slide-content > *:nth-child(2) { animation-delay: 0.1s; }
@@ -111,69 +111,69 @@ html, body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- TYPOGRAPHY & ELEMENTS --- */
+/* --- TYPOGRAPHY & ELEMENTS (SIZES INCREASED) --- */
 h1 { font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; color: var(--primary-color); font-weight: 700; }
 h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 2rem; color: var(--text-color); border-bottom: 3px solid var(--primary-color); display: inline-block; padding-bottom: 0.75rem; font-weight: 600; }
-p { font-size: clamp(1.1rem, 1.8vw, 1.3rem); line-height: 1.7; margin-bottom: 1.2rem; }
-ul, ol { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1rem; font-size: clamp(1rem, 1.7vw, 1.15rem); text-align: left; max-width: 80%; margin: 0 auto 1.5rem auto; }
-ul li, ol li { width: 100%; padding: 0.6rem 0; } /* Consistent spacing */
+p { font-size: clamp(1.2rem, 2vw, 1.45rem); line-height: 1.7; margin-bottom: 1.2rem; }
+ul, ol { list-style: none; display: flex; flex-direction: column; align-items: center; gap: 1rem; font-size: clamp(1.1rem, 1.8vw, 1.25rem); text-align: left; max-width: 80%; margin: 0 auto 1.5rem auto; }
+ul li, ol li { width: 100%; padding: 0.6rem 0; }
 
-.highlight { color: var(--primary-color); font-weight: 700; } /* Emphasize with primary color */
+.highlight { color: var(--primary-color); font-weight: 700; }
 .logo-large { font-size: 6rem; font-weight: 700; color: var(--primary-color); margin-bottom: 1.5rem; }
 ol { counter-reset: item; }
-ol li { display: flex; align-items: flex-start; gap: 1.2rem; } /* Align text better with numbers */
+ol li { display: flex; align-items: flex-start; gap: 1.2rem; }
 ol li span { 
     background: var(--primary-color); 
-    color: var(--card-color); /* White number on primary background */
+    color: var(--card-color);
     border-radius: 50%; 
-    min-width: 32px; /* Slightly larger circles */
+    min-width: 32px;
     height: 32px; 
     display: inline-flex; 
     justify-content: center; 
     align-items: center; 
     font-weight: bold; 
     font-size: 1rem;
-    flex-shrink: 0; /* Prevent number from shrinking */
+    flex-shrink: 0;
     box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
 }
 
 .highlight-box {
-    background-color: rgba(0, 123, 255, 0.08); /* Lighter background */
-    border-left: 5px solid var(--primary-color); /* More prominent border */
+    background-color: rgba(0, 123, 255, 0.08);
+    border-left: 5px solid var(--primary-color);
     padding: 1.2rem 1.8rem;
     margin-top: 2.5rem;
-    border-radius: 8px; /* Smoother corners */
+    border-radius: 8px;
     text-align: left;
     font-style: italic;
     color: var(--text-color);
-    box-shadow: 0 2px 10px var(--shadow-color); /* Subtle shadow */
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 /* --- NAVIGATION UI --- */
 .presentation-ui {
     position: fixed;
-    bottom: 30px; /* Further from bottom */
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* More space between elements */
+    gap: 1.5rem;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.8); /* Lighter, subtle background */
-    backdrop-filter: blur(8px); /* Stronger blur */
-    padding: 0.75rem 1.5rem; /* More padding */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 0.75rem 1.5rem;
     border-radius: 50px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 15px var(--shadow-color); /* Professional shadow */
+    box-shadow: 0 4px 15px var(--shadow-color);
 }
 .presentation-ui button {
     background: var(--card-color);
-    border: 1px solid var(--border-color); /* Subtle border for buttons */
-    color: var(--primary-color); /* Primary color for arrows */
-    width: 48px; /* Slightly larger buttons */
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    width: 48px;
     height: 48px;
     border-radius: 50%;
-    font-size: 1.6rem; /* Larger arrow icons */
+    font-size: 1.6rem;
     cursor: pointer;
     transition: all 0.2s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -188,9 +188,9 @@ ol li span {
     transform: scale(0.95);
 }
 #slide-counter {
-    font-size: 1.1rem; /* Slightly larger counter */
+    font-size: 1.1rem;
     font-weight: 600;
-    min-width: 60px; /* Wider counter */
+    min-width: 60px;
     text-align: center;
     color: var(--text-color);
 }
@@ -200,7 +200,7 @@ ol li span {
     .slide-content { padding: 2rem 1rem; }
     h1 { font-size: 2.8rem; }
     h2 { font-size: 1.8rem; }
-    p { font-size: 1rem; }
+    p { font-size: 1.1rem; } /* Adjusted mobile paragraph size */
     ul, ol { max-width: 100%; padding: 0 0.5rem; }
     ol li { flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; }
     ol li span { margin-bottom: 0.5rem; }
@@ -213,38 +213,38 @@ ol li span {
 /* --- CUSTOM SLIDE ELEMENTS STYLES --- */
 .persona-grid, .team-grid, .pricing-grid, .market-size-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width for cards */
-    gap: 2rem; /* More space */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 2.5rem;
     text-align: left;
 }
 @media (max-width: 768px) {
     .persona-grid, .team-grid, .pricing-grid, .market-size-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 }
 
 .persona-card, .team-member, .tier, .market-size-grid > div {
     background: var(--card-color);
     border: 1px solid var(--border-color);
-    padding: 2rem; /* More padding */
-    border-radius: 12px; /* Smoother corners */
+    padding: 2rem;
+    border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px var(--shadow-color); /* Professional shadow */
+    box-shadow: 0 4px 15px var(--shadow-color);
 }
 .persona-card:hover, .team-member:hover, .tier:hover {
-    transform: translateY(-8px); /* More pronounced hover */
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .persona-card h3, .team-member h3, .tier h3, .market-size-grid h3 {
     margin-bottom: 0.8rem;
-    color: var(--primary-color); /* Primary color for titles */
+    color: var(--primary-color);
     font-weight: 600;
 }
-/* Specific styling for scenario cards */
+/* Specific styling for scenario cards (SIZE INCREASED) */
 .persona-card p {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased from 1rem */
     margin-bottom: 1rem;
 }
 .persona-card .highlight {
@@ -256,7 +256,7 @@ ol li span {
 }
 
 .team-member .avatar-placeholder {
-    width: 70px; /* Larger avatar */
+    width: 70px;
     height: 70px;
     border-radius: 50%;
     background: var(--primary-color);
@@ -264,24 +264,24 @@ ol li span {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem; /* Larger initial */
+    font-size: 1.8rem;
     font-weight: bold;
-    margin: 0 auto 1.5rem auto; /* Centered */
+    margin: 0 auto 1.5rem auto;
     box-shadow: 0 2px 10px rgba(0, 123, 255, 0.2);
 }
 
 .market-size-grid > div {
     text-align: center;
-    background: var(--background-color); /* Slightly different background for distinction */
+    background: var(--background-color);
     border: 1px solid var(--border-color);
     padding: 1.8rem;
     border-radius: 12px;
-    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05); /* Inner shadow */
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
 }
 .market-size-grid p {
-    font-size: 2.8rem; /* Larger numbers */
+    font-size: 2.8rem;
     font-weight: bold;
-    color: var(--secondary-color); /* Use secondary color for market numbers */
+    color: var(--secondary-color);
     margin: 0.5rem 0;
     line-height: 1;
 }
@@ -305,7 +305,7 @@ ol li span {
 }
 .competition-chart p {
     padding: 0.8rem 0;
-    border-bottom: 1px dashed var(--border-color); /* Dashed border for visual interest */
+    border-bottom: 1px dashed var(--border-color);
     margin-bottom: 0;
 }
 .competition-chart p:last-child {
@@ -320,7 +320,7 @@ ol li span {
 .slide:last-child ul {
     list-style: disc;
     padding-left: 1.5rem;
-    max-width: 60%; /* Adjust width for bullet points */
+    max-width: 60%;
     margin-top: 1.5rem;
 }
 @media (max-width: 768px) {
@@ -331,8 +331,8 @@ ol li span {
 
 /* --- ADDITION FOR SINGLE USE CASE SLIDES --- */
 .use-case-slide .persona-grid {
-    grid-template-columns: 1fr; /* Force the grid to have only one column */
-    max-width: 700px; /* Constrain the width of the single card */
+    grid-template-columns: 1fr;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
